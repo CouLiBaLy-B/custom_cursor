@@ -1,12 +1,14 @@
-from typing import Dict, Optional, Any
-import subprocess
 import logging
-import requests
-import time
 import os
+import subprocess
 import tempfile
+import time
+from typing import Any, Dict, Optional
+
+import requests
 
 from src.catche_manager import CacheManager
+
 # Configuration du logging
 logging.basicConfig(
     level=logging.INFO,
@@ -20,9 +22,10 @@ logger = logging.getLogger(__name__)
 
 
 class OllamaClient:
-    """Client pour interagir avec Ollama (API ou CLI)"""
+    """Client pour interagir avec Ollama (API ou CLI)."""
 
     def __init__(self, config: Dict[str, Any]):
+        """Initialise le client Ollama avec la configuration fournie."""
         self.model_name = config["model_name"]
         self.api_url = config["ollama_api"]
         self.max_retries = config["max_retries"]
@@ -46,7 +49,7 @@ class OllamaClient:
         self.cache = CacheManager(config["cache_dir"], enabled=config["cache_enabled"])
 
     def _check_ollama_cli(self) -> bool:
-        """Vérifie si ollama est disponible en ligne de commande"""
+        """Vérifie si ollama est disponible en ligne de commande."""
         try:
             result = subprocess.run(
                 ["ollama", "list"],
@@ -64,7 +67,7 @@ class OllamaClient:
             return False
 
     def _check_ollama_api(self) -> bool:
-        """Vérifie si l'API ollama est disponible"""
+        """Vérifie si l'API ollama est disponible."""
         try:
             response = requests.get("http://localhost:11434/api/tags", timeout=5)
             return response.status_code == 200
@@ -72,7 +75,7 @@ class OllamaClient:
             return False
 
     def generate(self, prompt: str, model_name: Optional[str] = None) -> str:
-        """Génère du texte avec Ollama, avec retry et cache"""
+        """Génère du texte avec Ollama, avec retry et cache."""
         model = model_name or self.model_name
 
         # Vérifier le cache
@@ -94,7 +97,7 @@ class OllamaClient:
 
             except Exception as e:
                 logger.warning(
-                    f"Erreur lors de la génération (tentative {attempt+1}/{self.max_retries}): {e}"
+                    f"Erreur lors de la génération (tentative {attempt + 1}/{self.max_retries}): {e}"
                 )
                 if attempt + 1 == self.max_retries:
                     logger.error(
@@ -104,7 +107,7 @@ class OllamaClient:
                 time.sleep(2)  # Attendre avant de réessayer
 
     def _generate_with_api(self, prompt: str, model: str) -> str:
-        """Utilise l'API Ollama pour générer du texte"""
+        """Utilise l'API Ollama pour générer du texte."""
         try:
             start_time = time.time()
             payload = {
@@ -123,7 +126,7 @@ class OllamaClient:
             raise
 
     def _generate_with_cli(self, prompt: str, model: str) -> str:
-        """Utilise la CLI Ollama pour générer du texte"""
+        """Utilise la CLI Ollama pour générer du texte."""
         try:
             # Créer un fichier temporaire pour le prompt
             fd, temp_path = tempfile.mkstemp(text=True)

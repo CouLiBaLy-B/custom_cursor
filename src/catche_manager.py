@@ -1,17 +1,23 @@
-from typing import Optional
-from pathlib import Path
+"""Gestionnaire de cache pour stocker et récupérer des réponses."""
 import hashlib
+import logging
+from pathlib import Path
+from typing import Optional
+
+# import os
 
 # Configuration du logging
-from config.logger_config import logger
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 class CacheManager:
-    """Gestionnaire de cache pour les réponses du modèle"""
+    """Gestionnaire de cache pour stocker et récupérer des réponses."""
 
     def __init__(self, cache_dir: str, enabled: bool = True):
-        self.enabled = enabled
+        """Initialise le gestionnaire de cache avec le répertoire spécifié."""
         self.cache_dir = Path(cache_dir)
+        self.enabled = enabled
         if enabled:
             self.cache_dir.mkdir(parents=True, exist_ok=True)
 
@@ -21,7 +27,7 @@ class CacheManager:
         return hashlib.md5(content.encode()).hexdigest()
 
     def get_from_cache(self, prompt: str, model_name: str) -> Optional[str]:
-        """Récupère une réponse du cache si elle existe"""
+        """Récupère une réponse du cache si disponible."""
         if not self.enabled:
             return None
 
@@ -34,7 +40,7 @@ class CacheManager:
         return None
 
     def save_to_cache(self, prompt: str, model_name: str, response: str) -> None:
-        """Sauvegarde une réponse dans le cache"""
+        """Sauvegarde une réponse dans le cache."""
         if not self.enabled:
             return
 

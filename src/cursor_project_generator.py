@@ -1,28 +1,30 @@
-from typing import Dict, Any, Optional, Union, List
-from pathlib import Path
-import os
-import json
-import yaml
-import re
-import subprocess
-import traceback
-import time
 import concurrent.futures
-from datetime import datetime
+import json
+import os
+import re
 import shutil
+import subprocess
+import time
+import traceback
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
+
+import yaml
 from tqdm import tqdm
 
-from src.ollama_client import OllamaClient
 from config.default_config import DEFAULT_CONFIG
 
 # Configuration du logging
 from config.logger_config import logger
+from src.ollama_client import OllamaClient
 
 
 class CursorProjectGenerator:
-    """Générateur de projets basé sur les modèles d'IA"""
+    """Générateur de projets basé sur les modèles d'IA."""
 
     def __init__(self, config_path: Optional[str] = None):
+        """Initialise le générateur de projets avec un chemin de configuration."""
         # Charger la configuration
         self.config = self._load_config(config_path)
 
@@ -40,7 +42,7 @@ class CursorProjectGenerator:
         logger.info(f"Générateur initialisé avec le modèle {self.config['model_name']}")
 
     def _load_config(self, config_path: Optional[str]) -> Dict[str, Any]:
-        """Charge la configuration depuis un fichier ou utilise les valeurs par défaut"""
+        """Charge la configuration depuis un fichier ou utilise les valeurs par défaut."""
         config = DEFAULT_CONFIG.copy()
 
         # Si un chemin de config est spécifié, charger depuis ce fichier
@@ -81,7 +83,7 @@ class CursorProjectGenerator:
         return config
 
     def extract_json(self, text: str) -> str:
-        """Extrait un JSON valide d'une chaîne de caractères"""
+        """Extrait un JSON valide d'une chaîne de caractères."""
         # Rechercher tout ce qui ressemble à un JSON entre accolades
         pattern = r"\{.*\}"
         match = re.search(pattern, text, re.DOTALL)
@@ -94,7 +96,7 @@ class CursorProjectGenerator:
 
         # Essayer de parser le JSON
         try:
-            parsed = json.loads(json_str)
+            json.loads(json_str)
             return json_str
         except json.JSONDecodeError:
             logger.warning("JSON invalide extrait, tentative de correction...")
@@ -123,7 +125,7 @@ class CursorProjectGenerator:
                 )
 
     def clean_code_content(self, content: str) -> str:
-        """Nettoie le contenu des backticks et annotations de langage"""
+        """Nettoie le contenu des backticks et annotations de langage."""
         # Supprimer les blocs de code markdown
         content = re.sub(r"```[a-zA-Z]*\n", "", content)
         content = re.sub(r"```\n?$", "", content)
@@ -150,7 +152,7 @@ class CursorProjectGenerator:
     def generate_project_structure(
         self, description: str, template: Optional[str] = None
     ) -> Dict[str, Any]:
-        """Génère une structure de projet basée sur une description et éventuellement un template"""
+        """Génère une structure de projet basée sur une description et éventuellement un template."""
         template_context = ""
         if template and (self.templates_dir / f"{template}.yaml").exists():
             try:
@@ -172,40 +174,40 @@ class CursorProjectGenerator:
         Réponds UNIQUEMENT avec un JSON valide ayant la structure suivante, sans aucun texte explicatif:
 
         {{
-          "name": "nom_du_projet",
-          "description": "Description détaillée du projet",
-          "folders": [
-            "dossier1",
-            "dossier2/sousdossier",
+            "name": "nom_du_projet",
+            "description": "Description détaillée du projet",
+            "folders": [
+                "dossier1",
+                "dossier2/sousdossier",
             ...
-          ],
-          "files": [
+        ],
+        "files": [
             {{
-              "path": "chemin/relatif/fichier.ext",
-              "description": "Description détaillée du contenu et des fonctionnalités"
+                "path": "chemin/relatif/fichier.ext",
+                "description": "Description détaillée du contenu et des fonctionnalités"
             }},
             ...
-          ],
-          "dependencies": [
+        ],
+        "dependencies": [
             "dep1",
             "dep2==version",
             ...
-          ],
-          "dev_dependencies": [
+        ],
+        "dev_dependencies": [
             "test-framework",
             "linter",
             ...
-          ],
-          "commands": [
+        ],
+        "commands": [
             {{
-              "name": "start",
-              "command": "commande pour démarrer l'application"
+                "name": "start",
+                "command": "commande pour démarrer l'application"
             }},
             {{
-              "name": "test",
-              "command": "commande pour exécuter les tests"
+                "name": "test",
+                "command": "commande pour exécuter les tests"
             }}
-          ]
+        ]
         }}
 
         Assure-toi que la structure est complète et cohérente pour une application fonctionnelle.
@@ -274,10 +276,8 @@ class CursorProjectGenerator:
         3. Le code soit compatible avec les autres fichiers du projet
         4. Le code respecte les conventions propres au langage utilisé
         5. Si c'est un fichier de configuration, il doit être correctement formaté
-
         Réponds UNIQUEMENT avec le contenu du fichier, sans aucune explication ni markdown.
         """
-
         try:
             content = self.ollama.generate(prompt)
             cleaned_content = self.clean_code_content(content)
@@ -841,49 +841,49 @@ data/
 
             # Construire le prompt d'analyse
             prompt = f"""
-Tu es un expert en code review et en détection de problèmes dans le code. Analyse le projet suivant:
+            Tu es un expert en code review et en détection de problèmes dans le code. Analyse le projet suivant:
 
-Nom du projet: {project_structure.get('name', 'Projet inconnu')}
-Description: {project_structure.get('description', 'Aucune description disponible')}
+            Nom du projet: {project_structure.get('name', 'Projet inconnu')}
+            Description: {project_structure.get('description', 'Aucune description disponible')}
 
-Structure des fichiers:
-{json.dumps([f['path'] for f in project_structure.get('files', [])], indent=2)}
+            Structure des fichiers:
+            {json.dumps([f['path'] for f in project_structure.get('files', [])], indent=2)}
 
-Échantillons de code:
-{json.dumps(code_samples, indent=2)}
+            Échantillons de code:
+            {json.dumps(code_samples, indent=2)}
 
-Identifie tous les problèmes potentiels dans ce code, notamment:
-1. Bugs ou erreurs de programmation
-2. Problèmes de sécurité
-3. Mauvaises pratiques de code
-4. Incohérences dans l'architecture
-5. Code dupliqué ou redondant
-6. Problèmes de performance
+            Identifie tous les problèmes potentiels dans ce code, notamment:
+            1. Bugs ou erreurs de programmation
+            2. Problèmes de sécurité
+            3. Mauvaises pratiques de code
+            4. Incohérences dans l'architecture
+            5. Code dupliqué ou redondant
+            6. Problèmes de performance
 
-Réponds avec un JSON structuré contenant ton analyse:
-{{
-  "issues": [
-    {{
-      "file": "chemin/du/fichier.ext",
-      "type": "type de problème (bug, sécurité, etc.)",
-      "severity": "critical|high|medium|low",
-      "description": "Description détaillée du problème",
-      "suggestion": "Suggestion pour corriger le problème"
-    }},
-    ...
-  ],
-  "recommendations": [
-    {{
-      "type": "amélioration|refactoring|architecture|test",
-      "description": "Description de la recommandation",
-      "priority": "high|medium|low"
-    }},
-    ...
-  ],
-  "overall_quality": "excellent|good|average|poor",
-  "summary": "Résumé global de la qualité du projet et des principaux problèmes"
-}}
-    """
+            Réponds avec un JSON structuré contenant ton analyse:
+            {{
+                "issues": [
+                {{
+                    "file": "chemin/du/fichier.ext",
+                    "type": "type de problème (bug, sécurité, etc.)",
+                    "severity": "critical|high|medium|low",
+                    "description": "Description détaillée du problème",
+                    "suggestion": "Suggestion pour corriger le problème"
+                }},
+                ...
+                ],
+                "recommendations": [
+                {{
+                    "type": "amélioration|refactoring|architecture|test",
+                    "description": "Description de la recommandation",
+                    "priority": "high|medium|low"
+                }},
+                ...
+                ],
+                "overall_quality": "excellent|good|average|poor",
+                "summary": "Résumé global de la qualité du projet et des principaux problèmes"
+            }}
+            """
 
             # Générer l'analyse
             response = self.ollama.generate(prompt)
@@ -954,9 +954,9 @@ Réponds avec un JSON structuré contenant ton analyse:
 
                     try:
                         # Description du problème à corriger
-                        error_description = (
-                            f"{issue.get('type', 'Bug')}: {issue.get('description', 'Problème non spécifié')}"
-                        )
+                        error_description = f"""
+                        {issue.get('type','Bug')}: {issue.get('description', 'Problème non spécifié')}
+                        """
                         if issue.get("suggestion"):
                             error_description += (
                                 f"\n\nSuggestion: {issue['suggestion']}"

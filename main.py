@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-import json
+"""Point d'entrée principal pour l'application."""
 import argparse
-
+import json
 import shutil
 from pathlib import Path
 
@@ -10,6 +10,7 @@ from src.display_info import show_project_info
 
 
 def main():
+    """Point d'entrée principal pour l'application."""
     parser = argparse.ArgumentParser(
         description="Générateur avancé de projets basé sur les modèles IA"
     )
@@ -177,11 +178,10 @@ def main():
                 # Afficher un résumé
                 if analysis.get("issues"):
                     print("\nProblèmes principaux:")
-                    for i, issue in enumerate(
-                        analysis["issues"][:5]
-                    ):  # Limiter à 5 problèmes
+                    for i, issue in enumerate(analysis["issues"][:5]):
+                        # Limiter à 5 problèmes
                         print(
-                            f"""  {i+1}. [{issue.get('severity', 'medium')}] {issue.get('file')}:
+                            f"""  {i + 1}. [{issue.get('severity', 'medium')}] {issue.get('file')}:
                             {issue.get('description')}"""
                         )
 
@@ -258,10 +258,9 @@ def main():
 
                 if report["fixed_count"] > 0:
                     print("\nFichiers corrigés:")
-                    for fixed in report["details"]["fixed_files"][
-                        :5
-                    ]:  # Limiter à 5 fichiers
-                        print(f"  - {fixed['file']} ({fixed['issue']})")
+                    for fixed in report["details"]["fixed_files"][:5]:
+                        # Limiter à 5 fichiers
+                        print(f" - {fixed['file']} ({fixed['issue']})")
 
                     if len(report["details"]["fixed_files"]) > 5:
                         print(

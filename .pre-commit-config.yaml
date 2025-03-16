@@ -1,0 +1,80 @@
+# Fichier .pre-commit-config.yaml
+# À placer à la racine de votre projet
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+        description: 'Supprime les espaces en fin de ligne'
+    -   id: end-of-file-fixer
+        description: 'S assure que les fichiers se terminent par une ligne vide'
+    -   id: check-yaml
+        description: 'Vérifie la syntaxe des fichiers YAML'
+    -   id: check-json
+        description: 'Vérifie la syntaxe des fichiers JSON'
+    -   id: check-added-large-files
+        description: 'Empêche les commits de gros fichiers'
+        args: ['--maxkb=500']
+    -   id: check-merge-conflict
+        description: 'Vérifie les conflits de fusion'
+    -   id: detect-private-key
+        description: 'Détecte les clés privées'
+    -   id: check-case-conflict
+        description: 'Vérifie les conflits de casse dans les noms de fichiers'
+    -   id: mixed-line-ending
+        description: 'Normalise les fins de ligne'
+        args: ['--fix=lf']
+
+# Pour les projets Python
+-   repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+    -   id: isort
+        description: 'Trie les imports'
+        args: ['--profile', 'black']
+
+-   repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+    -   id: black
+        description: 'Formate le code Python'
+
+-   repo: https://github.com/pycqa/flake8
+    rev: 6.0.0
+    hooks:
+    -   id: flake8
+        description: 'Vérifie le style et la qualité du code Python'
+        additional_dependencies: [
+            'flake8-bugbear',
+            'flake8-comprehensions',
+            'flake8-docstrings',
+        ]
+
+# Pour les projets avec Docker
+-   repo: https://github.com/hadolint/hadolint
+    rev: v2.12.0
+    hooks:
+    -   id: hadolint
+        description: 'Lint les Dockerfiles'
+
+# Pour vérifier les secrets
+-   repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+    -   id: detect-secrets
+        description: 'Détecte les secrets accidentellement commités'
+
+# Pour les projets avec des fichiers markdown
+-   repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.33.0
+    hooks:
+    -   id: markdownlint
+        description: 'Lint les fichiers Markdown'
+
+# Pour les commits conventionnels
+-   repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v2.3.0
+    hooks:
+    -   id: conventional-pre-commit
+        description: 'Vérifie que les messages de commit suivent la convention'
+        args: [feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert]

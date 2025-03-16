@@ -1,3 +1,4 @@
+"""Configuration par défaut pour le projet."""
 # Configuration par défaut
 DEFAULT_CONFIG = {
     "model_name": "qwen2.5-coder",
