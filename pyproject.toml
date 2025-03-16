@@ -1,0 +1,19 @@
+[project]
+name = "custom-cursor"
+version = "0.1.0"
+description = "Custom cursor with ollama"
+authors = [
+    {name = "coulibaly-b",email = "icoulbi4@gmail.com"}
+]
+license = {text = "Personal"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tqdm (>=4.67.1,<5.0.0)",
+    "pyyaml (>=6.0.2,<7.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
