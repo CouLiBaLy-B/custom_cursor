@@ -1,0 +1,13 @@
+{
+    "ollama_api": "http://localhost:11434/api/generate",
+    "model_name": "deepseek-r1",
+    "temperature": 0.2,
+    "max_retries": 3,
+    "cache_enabled": true,
+    "cache_dir": ".cache",
+    "setup_venv": true,
+    "init_git": true,
+    "open_in_cursor": true,
+    "base_path": "./projects"
+  }
+  

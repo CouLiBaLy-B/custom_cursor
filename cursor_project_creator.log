@@ -1,0 +1,223 @@
+2025-03-17 18:56:36,654 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 18:56:36,654 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder
+2025-03-17 18:56:36,654 - config.logger_config - INFO - Création d'un projet pour: Je souhaite créer une application web pour mon portfolio personnel en utilisant Flask. L'application doit inclure une page d'accueil présentant mon nom, un résumé et une photo. Elle doit également comporter les sections suivantes : 'À propos de moi', 'Mes projets', 'Compétences', et 'Contact'. Chaque section doit avoir son propre lien dans une barre de navigation. Les projets doivent être présentés avec une image, une brève description et un lien vers le projet (par exemple, GitHub ou un site live). La section 'Contact' doit inclure un formulaire pour m'envoyer un message. Le design doit être simple, professionnel et responsive. Produisez le code Flask complet avec les fichiers HTML, CSS et Python nécessaires.
+2025-03-17 18:56:36,658 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 18:56:36,658 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 1/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 18:56:38,665 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 18:56:38,665 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 2/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 18:56:40,670 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 18:56:40,670 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 3/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 18:56:40,671 - src.ollama_client - ERROR - Échec de la génération après 3 tentatives
+2025-03-17 18:56:40,671 - config.logger_config - ERROR - Erreur lors de la génération de la structure: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 18:56:40,673 - config.logger_config - ERROR - Erreur lors de la création du projet: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:01:05,722 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:01:05,761 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:01:05,761 - config.logger_config - INFO - Générateur initialisé avec le modèle mistral:latest
+2025-03-17 19:01:05,761 - config.logger_config - INFO - Création d'un projet pour: Je souhaite créer une application web pour mon portfolio personnel en utilisant Flask. L'application doit inclure une page d'accueil présentant mon nom, un résumé et une photo. Elle doit également comporter les sections suivantes : 'À propos de moi', 'Mes projets', 'Compétences', et 'Contact'. Chaque section doit avoir son propre lien dans une barre de navigation. Les projets doivent être présentés avec une image, une brève description et un lien vers le projet (par exemple, GitHub ou un site live). La section 'Contact' doit inclure un formulaire pour m'envoyer un message. Le design doit être simple, professionnel et responsive. Produisez le code Flask complet avec les fichiers HTML, CSS et Python nécessaires.
+2025-03-17 19:01:06,657 - src.ollama_client - ERROR - Erreur API Ollama: 'response'
+2025-03-17 19:01:06,657 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 1/3): 'response'
+2025-03-17 19:01:08,669 - src.ollama_client - ERROR - Erreur API Ollama: 'response'
+2025-03-17 19:01:08,669 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 2/3): 'response'
+2025-03-17 19:01:10,680 - src.ollama_client - ERROR - Erreur API Ollama: 'response'
+2025-03-17 19:01:10,680 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 3/3): 'response'
+2025-03-17 19:01:10,680 - src.ollama_client - ERROR - Échec de la génération après 3 tentatives
+2025-03-17 19:01:10,680 - config.logger_config - ERROR - Erreur lors de la génération de la structure: 'response'
+2025-03-17 19:01:10,681 - config.logger_config - ERROR - Erreur lors de la création du projet: 'response'
+2025-03-17 19:03:03,261 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:03:03,304 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:03:03,304 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-17 19:03:03,304 - config.logger_config - INFO - Création d'un projet pour: Je souhaite créer une application web pour mon portfolio personnel en utilisant Flask. L'application doit inclure une page d'accueil présentant mon nom, un résumé et une photo. Elle doit également comporter les sections suivantes : 'À propos de moi', 'Mes projets', 'Compétences', et 'Contact'. Chaque section doit avoir son propre lien dans une barre de navigation. Les projets doivent être présentés avec une image, une brève description et un lien vers le projet (par exemple, GitHub ou un site live). La section 'Contact' doit inclure un formulaire pour m'envoyer un message. Le design doit être simple, professionnel et responsive. Produisez le code Flask complet avec les fichiers HTML, CSS et Python nécessaires.
+2025-03-17 19:03:18,708 - config.logger_config - INFO - Structure générée pour le projet: Portfolio-Flask
+2025-03-17 19:03:18,708 - config.logger_config - INFO - Projet créé à: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318
+2025-03-17 19:03:18,709 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app
+2025-03-17 19:03:18,709 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/static/css
+2025-03-17 19:03:18,709 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/static/images
+2025-03-17 19:03:18,709 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/templates
+2025-03-17 19:03:18,709 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/tests
+2025-03-17 19:03:20,778 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/__init__.py
+2025-03-17 19:03:22,998 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/routes.py
+2025-03-17 19:03:25,354 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/templates/base.html
+2025-03-17 19:03:26,395 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/templates/home.html
+2025-03-17 19:03:32,296 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/templates/about.html
+2025-03-17 19:03:33,356 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/templates/projects.html
+2025-03-17 19:03:33,391 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/static/css/style.css
+2025-03-17 19:03:35,639 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/templates/skills.html
+2025-03-17 19:03:36,152 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/requirements.txt
+2025-03-17 19:03:37,484 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/config.py
+2025-03-17 19:03:38,654 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/app/templates/contact.html
+2025-03-17 19:03:43,009 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/tests/test_routes.py
+2025-03-17 19:03:44,030 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/Portfolio-Flask_20250317_190318/README.md
+2025-03-17 19:03:44,031 - config.logger_config - INFO - requirements.txt généré
+2025-03-17 19:03:44,031 - config.logger_config - INFO - dev-requirements.txt généré
+2025-03-17 19:03:44,033 - config.logger_config - INFO - Dépôt Git initialisé
+2025-03-17 19:03:44,033 - config.logger_config - INFO - Création de l'environnement virtuel...
+2025-03-17 19:03:45,436 - config.logger_config - INFO - Installation des dépendances...
+2025-03-17 19:03:46,436 - config.logger_config - INFO - Dépendances installées avec succès
+2025-03-17 19:03:46,438 - config.logger_config - WARNING - Impossible d'ouvrir dans Cursor: [Errno 2] No such file or directory: 'cursor'
+2025-03-17 19:03:46,438 - config.logger_config - INFO - Projet créé en 43.13 secondes
+2025-03-17 19:15:32,372 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:15:32,372 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder
+2025-03-17 19:15:32,378 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:15:32,378 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 1/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:15:34,384 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:15:34,384 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 2/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:15:36,386 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:15:36,386 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 3/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:15:36,386 - src.ollama_client - ERROR - Échec de la génération après 3 tentatives
+2025-03-17 19:15:36,386 - config.logger_config - ERROR - Erreur lors de l'analyse du projet projects/Portfolio-Flask_20250317_190318: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:16:14,407 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:16:14,445 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:16:14,445 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-17 19:16:26,857 - config.logger_config - INFO - Analyse du projet projects/Portfolio-Flask_20250317_190318 terminée avec 5 problèmes détectés
+2025-03-17 19:20:09,267 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:20:09,267 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder
+2025-03-17 19:20:09,268 - config.logger_config - INFO - Analyse automatique du projet projects/Portfolio-Flask_20250317_190318
+2025-03-17 19:20:09,273 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:20:09,273 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 1/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:20:11,279 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:20:11,279 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 2/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:20:13,284 - src.ollama_client - ERROR - Erreur API Ollama: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:20:13,284 - src.ollama_client - WARNING - Erreur lors de la génération (tentative 3/3): 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:20:13,285 - src.ollama_client - ERROR - Échec de la génération après 3 tentatives
+2025-03-17 19:20:13,285 - config.logger_config - ERROR - Erreur lors de l'analyse du projet projects/Portfolio-Flask_20250317_190318: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:20:13,285 - config.logger_config - ERROR - Erreur lors de la correction du projet projects/Portfolio-Flask_20250317_190318: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-17 19:20:28,712 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:20:28,752 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:20:28,752 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-17 19:20:28,752 - config.logger_config - INFO - Analyse automatique du projet projects/Portfolio-Flask_20250317_190318
+2025-03-17 19:20:28,754 - config.logger_config - INFO - Analyse du projet projects/Portfolio-Flask_20250317_190318 terminée avec 5 problèmes détectés
+2025-03-17 19:20:31,662 - config.logger_config - INFO - Fichier corrigé: config.py
+2025-03-17 19:20:35,289 - config.logger_config - INFO - Fichier corrigé: config.py
+2025-03-17 19:20:35,289 - config.logger_config - INFO - Correction terminée: 2 fichiers corrigés, 0 erreurs
+2025-03-17 19:21:10,682 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:21:10,724 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:21:10,724 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-17 19:21:10,724 - config.logger_config - INFO - Analyse automatique du projet projects/Portfolio-Flask_20250317_190318
+2025-03-17 19:21:21,450 - config.logger_config - INFO - Analyse du projet projects/Portfolio-Flask_20250317_190318 terminée avec 5 problèmes détectés
+2025-03-17 19:21:25,073 - config.logger_config - INFO - Fichier corrigé: config.py
+2025-03-17 19:21:28,520 - config.logger_config - INFO - Fichier corrigé: config.py
+2025-03-17 19:21:31,960 - config.logger_config - INFO - Fichier corrigé: config.py
+2025-03-17 19:21:34,296 - config.logger_config - INFO - Fichier corrigé: app/templates/skills.html
+2025-03-17 19:21:36,597 - config.logger_config - INFO - Fichier corrigé: app/templates/skills.html
+2025-03-17 19:21:36,598 - config.logger_config - INFO - Correction terminée: 5 fichiers corrigés, 0 erreurs
+2025-03-17 19:22:12,327 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:22:12,373 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:22:12,374 - config.logger_config - INFO - Générateur initialisé avec le modèle deepseek-r1
+2025-03-17 19:22:12,374 - config.logger_config - INFO - Analyse automatique du projet projects/Portfolio-Flask_20250317_190318
+2025-03-17 19:22:20,701 - config.logger_config - WARNING - JSON invalide extrait, tentative de correction...
+2025-03-17 19:22:20,701 - config.logger_config - ERROR - Échec de correction JSON: Invalid control character at: line 2 column 17 (char 18)
+2025-03-17 19:22:20,701 - config.logger_config - ERROR - Erreur lors de l'analyse du projet projects/Portfolio-Flask_20250317_190318: Impossible de parser le JSON, même après correction: Invalid control character at: line 2 column 17 (char 18)
+2025-03-17 19:22:20,701 - config.logger_config - ERROR - Erreur lors de la correction du projet projects/Portfolio-Flask_20250317_190318: Impossible de parser le JSON, même après correction: Invalid control character at: line 2 column 17 (char 18)
+2025-03-17 19:22:47,791 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:22:47,831 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:22:47,831 - config.logger_config - INFO - Générateur initialisé avec le modèle mistral
+2025-03-17 19:22:47,831 - config.logger_config - INFO - Analyse automatique du projet projects/Portfolio-Flask_20250317_190318
+2025-03-17 19:22:52,556 - config.logger_config - INFO - Analyse du projet projects/Portfolio-Flask_20250317_190318 terminée avec 2 problèmes détectés
+2025-03-17 19:22:52,560 - config.logger_config - INFO - Correction terminée: 0 fichiers corrigés, 0 erreurs
+2025-03-17 19:23:17,520 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:23:17,556 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:23:17,556 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-17 19:23:17,556 - config.logger_config - INFO - Analyse automatique du projet projects/Portfolio-Flask_20250317_190318
+2025-03-17 19:23:29,520 - config.logger_config - INFO - Analyse du projet projects/Portfolio-Flask_20250317_190318 terminée avec 5 problèmes détectés
+2025-03-17 19:23:29,525 - config.logger_config - INFO - Correction terminée: 0 fichiers corrigés, 0 erreurs
+2025-03-17 19:30:12,541 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-17 19:30:12,584 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-17 19:30:12,584 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-17 19:30:18,467 - config.logger_config - INFO - Fichier corrigé: config.py
+2025-03-17 19:30:22,129 - config.logger_config - INFO - Fichier corrigé: config.py
+2025-03-17 19:30:22,129 - config.logger_config - INFO - Correction terminée: 2 fichiers corrigés, 0 erreurs
+2025-03-18 09:47:14,965 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-18 09:47:14,999 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-18 09:47:14,999 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-18 09:47:14,999 - config.logger_config - INFO - Création d'un projet pour: Je voudrais que tu conçoives un portfolio web pour moi. Voici quelques détails pour t'orienter : Objectif : Le portfolio doit présenter mes compétences, expériences, projets et coordonnées. Structure : Une page d'accueil avec une introduction attrayante. Une section 'À propos' pour détailler mes compétences et qualifications. Une galerie ou une section pour mettre en avant mes projets. Une section 'Contact' avec un formulaire ou mes coordonnées. Design : Moderne, clair et professionnel. Utilise une palette de couleurs sobres et des polices faciles à lire. Technologies : Crée-le avec HTML, CSS, et JavaScript. Tu peux suggérer l'intégration de frameworks si nécessaire (par exemple, React ou Bootstrap). Autres éléments : Rends-le responsive pour qu'il soit adapté aux écrans mobiles. Ajoute un favicon et un logo simple si possible. Prévois un système de navigation intuitif. Je reste disponible pour toute précision ou ajustement. Merci pour ton aide !
+2025-03-18 09:47:23,619 - config.logger_config - INFO - Structure générée pour le projet: portfolio-web
+2025-03-18 09:47:23,620 - config.logger_config - INFO - Projet créé à: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723
+2025-03-18 09:47:23,620 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src
+2025-03-18 09:47:23,620 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/assets
+2025-03-18 09:47:23,620 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/css
+2025-03-18 09:47:23,620 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/images
+2025-03-18 09:47:23,620 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/js
+2025-03-18 09:47:23,620 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/pages
+2025-03-18 09:47:23,620 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/tests
+2025-03-18 09:47:23,620 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour README.md: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,621 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour index.html: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,621 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour src/css/styles.css: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,621 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour src/js/main.js: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,621 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour src/pages/about.html: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,622 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour src/pages/projects.html: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,622 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour src/pages/contact.html: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,623 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour src/assets/favicon.ico: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,623 - config.logger_config - ERROR - Erreur lors de la génération du contenu pour src/assets/logo.png: OllamaClient.generate() got an unexpected keyword argument 'timeout'
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/pages/about.html
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/pages/contact.html
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/js/main.js
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/pages/projects.html
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/README.md
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/index.html
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/assets/logo.png
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/assets/favicon.ico
+2025-03-18 09:47:23,626 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/src/css/styles.css
+2025-03-18 09:47:23,627 - config.logger_config - INFO - requirements.txt généré
+2025-03-18 09:47:23,627 - config.logger_config - INFO - dev-requirements.txt généré
+2025-03-18 09:47:23,629 - config.logger_config - INFO - Dépôt Git initialisé
+2025-03-18 09:47:23,629 - config.logger_config - INFO - Création de l'environnement virtuel...
+2025-03-18 09:47:25,980 - config.logger_config - INFO - Installation des dépendances...
+2025-03-18 09:47:26,398 - config.logger_config - WARNING - Erreur lors de l'installation des dépendances de base: Command '['/home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_094723/venv/bin/pip', 'install', 'bootstrap']' returned non-zero exit status 1.
+2025-03-18 09:47:26,535 - config.logger_config - INFO - Dépendances installées avec succès
+2025-03-18 09:47:26,535 - config.logger_config - WARNING - Impossible d'ouvrir dans Cursor: [Errno 2] No such file or directory: 'cursor'
+2025-03-18 09:47:26,535 - config.logger_config - INFO - Projet créé en 11.54 secondes
+2025-03-18 09:50:05,477 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-18 09:50:05,522 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-18 09:50:05,523 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-18 09:50:05,523 - config.logger_config - INFO - Création d'un projet pour: Je voudrais que tu conçoives un portfolio web pour moi. Voici quelques détails pour t'orienter : Objectif : Le portfolio doit présenter mes compétences, expériences, projets et coordonnées. Structure : Une page d'accueil avec une introduction attrayante. Une section 'À propos' pour détailler mes compétences et qualifications. Une galerie ou une section pour mettre en avant mes projets. Une section 'Contact' avec un formulaire ou mes coordonnées. Design : Moderne, clair et professionnel. Utilise une palette de couleurs sobres et des polices faciles à lire. Technologies : Crée-le avec HTML, CSS, et JavaScript. Tu peux suggérer l'intégration de frameworks si nécessaire (par exemple, React ou Bootstrap). Autres éléments : Rends-le responsive pour qu'il soit adapté aux écrans mobiles. Ajoute un favicon et un logo simple si possible. Prévois un système de navigation intuitif. Je reste disponible pour toute précision ou ajustement. Merci pour ton aide !
+2025-03-18 09:50:05,524 - config.logger_config - INFO - Structure générée pour le projet: portfolio-web
+2025-03-18 09:50:05,525 - config.logger_config - INFO - Projet créé à: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005
+2025-03-18 09:50:05,525 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src
+2025-03-18 09:50:05,525 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/assets
+2025-03-18 09:50:05,525 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/css
+2025-03-18 09:50:05,525 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/images
+2025-03-18 09:50:05,525 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/js
+2025-03-18 09:50:05,525 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/pages
+2025-03-18 09:50:05,525 - config.logger_config - INFO - Dossier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/tests
+2025-03-18 09:50:11,140 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/index.html
+2025-03-18 09:50:12,213 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/README.md
+2025-03-18 09:50:16,462 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/css/styles.css
+2025-03-18 09:50:18,172 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/js/main.js
+2025-03-18 09:50:21,446 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/pages/about.html
+2025-03-18 09:50:21,616 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/assets/favicon.ico
+2025-03-18 09:50:23,129 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/assets/logo.png
+2025-03-18 09:50:24,425 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/pages/contact.html
+2025-03-18 09:50:25,565 - config.logger_config - INFO - Fichier créé: /home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/src/pages/projects.html
+2025-03-18 09:50:25,566 - config.logger_config - INFO - requirements.txt généré
+2025-03-18 09:50:25,566 - config.logger_config - INFO - dev-requirements.txt généré
+2025-03-18 09:50:25,593 - config.logger_config - INFO - Dépôt Git initialisé
+2025-03-18 09:50:25,593 - config.logger_config - INFO - Création de l'environnement virtuel...
+2025-03-18 09:50:27,950 - config.logger_config - INFO - Installation des dépendances...
+2025-03-18 09:50:28,372 - config.logger_config - WARNING - Erreur lors de l'installation des dépendances de base: Command '['/home/bourahima.coulibaly/Github/custom_cursor/projects/portfolio-web_20250318_095005/venv/bin/pip', 'install', 'bootstrap']' returned non-zero exit status 1.
+2025-03-18 09:50:28,508 - config.logger_config - INFO - Dépendances installées avec succès
+2025-03-18 09:50:28,509 - config.logger_config - WARNING - Impossible d'ouvrir dans Cursor: [Errno 2] No such file or directory: 'cursor'
+2025-03-18 09:50:28,509 - config.logger_config - INFO - Projet créé en 22.99 secondes
+2025-03-18 09:53:01,616 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-18 09:53:01,652 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-18 09:53:01,653 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-18 09:53:14,199 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-18 09:53:14,239 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-18 09:53:14,240 - config.logger_config - INFO - Générateur initialisé avec le modèle qwen2.5-coder:14b
+2025-03-18 09:53:14,240 - config.logger_config - INFO - Analyse automatique du projet projects/portfolio-web_20250318_095005
+2025-03-18 09:53:14,242 - config.logger_config - INFO - Pylint n'est pas installé, analyse statique Python ignorée
+2025-03-18 09:53:23,100 - config.logger_config - INFO - Analyse du projet projects/portfolio-web_20250318_095005 terminée avec 4 problèmes détectés
+2025-03-18 09:53:32,438 - config.logger_config - INFO - Fichier corrigé: src/pages/projects.html
+2025-03-18 09:53:38,275 - config.logger_config - INFO - Fichier corrigé: src/pages/contact.html
+2025-03-18 09:53:38,668 - config.logger_config - INFO - Fichier corrigé: src/assets/favicon.ico
+2025-03-18 09:53:40,459 - config.logger_config - INFO - Fichier corrigé: src/assets/logo.png
+2025-03-18 09:53:40,459 - config.logger_config - INFO - Correction terminée: 4 fichiers corrigés, 0 erreurs
+2025-03-18 09:54:57,591 - config.logger_config - INFO - Configuration chargée depuis config.json
+2025-03-18 09:54:57,629 - src.ollama_client - INFO - Mode Ollama: API
+2025-03-18 09:54:57,630 - config.logger_config - INFO - Générateur initialisé avec le modèle deepseek-r1
+2025-03-18 09:54:57,631 - config.logger_config - INFO - Analyse automatique du projet projects/portfolio-web_20250318_095005
+2025-03-18 09:54:57,633 - config.logger_config - INFO - Pylint n'est pas installé, analyse statique Python ignorée
+2025-03-18 09:55:05,906 - config.logger_config - INFO - Analyse du projet projects/portfolio-web_20250318_095005 terminée avec 6 problèmes détectés
+2025-03-18 09:55:10,749 - config.logger_config - INFO - Fichier corrigé: src/assets/logo.png
+2025-03-18 09:55:17,687 - config.logger_config - INFO - Fichier corrigé: src/js/main.js
+2025-03-18 09:55:22,367 - config.logger_config - INFO - Fichier corrigé: src/js/main.js
+2025-03-18 09:55:22,367 - config.logger_config - INFO - Correction terminée: 3 fichiers corrigés, 0 erreurs
